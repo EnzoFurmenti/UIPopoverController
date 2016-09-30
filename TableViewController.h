@@ -9,6 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface TableViewController : UITableViewController
+@property (weak, nonatomic) IBOutlet UITextField *dateOfBirth;
+
+@property (weak, nonatomic) IBOutlet UITextField *educationTExtField;
 
 
 @end

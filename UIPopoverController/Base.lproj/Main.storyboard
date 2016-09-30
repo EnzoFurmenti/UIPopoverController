@@ -31,10 +31,13 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qlv-GA-iIk">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qlv-GA-iIk">
                                                     <rect key="frame" x="195.5" y="7" width="396.5" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="namePhonePad"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="cGL-uz-dSc" id="CMH-kX-58r"/>
+                                                    </connections>
                                                 </textField>
                                                 <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iLw-Xs-mO3" userLabel="ViewС">
                                                     <rect key="frame" x="290" y="12.5" width="20" height="20"/>
@@ -76,10 +79,13 @@
                                                         <constraint firstAttribute="height" constant="20" id="qfF-gC-rnh"/>
                                                     </constraints>
                                                 </view>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="m1l-HY-BvD">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="20" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="m1l-HY-BvD">
                                                     <rect key="frame" x="196" y="7" width="396.5" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" keyboardType="namePhonePad"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="cGL-uz-dSc" id="4sU-0z-cma"/>
+                                                    </connections>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1RG-3A-pN5">
                                                     <rect key="frame" x="8" y="11" width="74" height="21"/>
@@ -154,7 +160,7 @@
                                                         <constraint firstAttribute="width" secondItem="8W0-2J-YJp" secondAttribute="height" multiplier="20:20" id="zCP-Wl-PcX"/>
                                                     </constraints>
                                                 </view>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Yj-0Y-1yR">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Yj-0Y-1yR">
                                                     <rect key="frame" x="196" y="8" width="396.5" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -187,7 +193,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FfX-NM-XNC">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="200" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FfX-NM-XNC">
                                                     <rect key="frame" x="195" y="7" width="396.5" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -225,10 +231,63 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Main" id="GmR-sB-PU8"/>
+                    <connections>
+                        <outlet property="dateOfBirth" destination="4Yj-0Y-1yR" id="FBS-2F-nRj"/>
+                        <outlet property="educationTExtField" destination="FfX-NM-XNC" id="wE6-UO-4Jd"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLc-gz-p5P" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="601" y="347"/>
+            <point key="canvasLocation" x="828" y="373"/>
+        </scene>
+        <!--Date Picker Popover Controller-->
+        <scene sceneID="hjY-aF-EQB">
+            <objects>
+                <viewController storyboardIdentifier="DatePickerPopoverController" id="265-xT-MWE" customClass="DatePickerPopoverController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RaV-Pe-Wvg"/>
+                        <viewControllerLayoutGuide type="bottom" id="NAJ-Am-iL0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QVv-GR-RxT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4gk-kO-jWY">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Дата" id="zhN-Jg-BWk"/>
+                                </items>
+                            </navigationBar>
+                            <datePicker contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="djR-5o-eqf">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <date key="date" timeIntervalSinceReferenceDate="496846320.26822799">
+                                    <!--2016-09-29 12:52:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="ru_RU"/>
+                                <connections>
+                                    <action selector="actionValueChanged:" destination="265-xT-MWE" eventType="valueChanged" id="FOD-XM-dHb"/>
+                                </connections>
+                            </datePicker>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="4gk-kO-jWY" secondAttribute="trailing" id="1U2-4R-U5Q"/>
+                            <constraint firstItem="djR-5o-eqf" firstAttribute="leading" secondItem="QVv-GR-RxT" secondAttribute="leadingMargin" constant="-20" id="E1d-Ni-AEx"/>
+                            <constraint firstItem="djR-5o-eqf" firstAttribute="top" secondItem="4gk-kO-jWY" secondAttribute="bottom" id="G3B-Cj-R7t"/>
+                            <constraint firstItem="4gk-kO-jWY" firstAttribute="top" secondItem="QVv-GR-RxT" secondAttribute="top" id="lNe-4b-cNE"/>
+                            <constraint firstItem="NAJ-Am-iL0" firstAttribute="top" secondItem="djR-5o-eqf" secondAttribute="bottom" id="lRs-Yg-yyf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="djR-5o-eqf" secondAttribute="trailing" constant="-20" id="xy4-ok-Tmj"/>
+                            <constraint firstItem="4gk-kO-jWY" firstAttribute="leading" secondItem="QVv-GR-RxT" secondAttribute="leading" id="ybi-kw-pDQ"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="300" height="300"/>
+                    <connections>
+                        <outlet property="datePicker" destination="djR-5o-eqf" id="Whh-aT-rde"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kU6-vl-AAG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1557" y="726"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="Ajd-0r-Rfc">
@@ -271,7 +330,58 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jlf-yC-MXX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1480" y="373"/>
+            <point key="canvasLocation" x="1557" y="-51"/>
+        </scene>
+        <!--Education Picker View Controller-->
+        <scene sceneID="ZgF-RW-XpY">
+            <objects>
+                <viewController storyboardIdentifier="EducationPickerViewController" id="5gY-Mb-MXX" customClass="EducationPickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="are-d6-9pi"/>
+                        <viewControllerLayoutGuide type="bottom" id="zm7-Dd-sCM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PJI-EC-x4P">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGd-me-G1D">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Образование" id="Ad2-R6-4ER"/>
+                                </items>
+                            </navigationBar>
+                            <pickerView contentMode="scaleToFill" verticalHuggingPriority="249" translatesAutoresizingMaskIntoConstraints="NO" id="KOr-oU-J0g">
+                                <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                                <color key="backgroundColor" red="0.35696837660000003" green="0.83477176050000002" blue="0.55183755030000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qGd-me-G1D" firstAttribute="top" secondItem="PJI-EC-x4P" secondAttribute="top" id="1e3-a1-VJv"/>
+                            <constraint firstItem="KOr-oU-J0g" firstAttribute="leading" secondItem="PJI-EC-x4P" secondAttribute="leadingMargin" constant="-20" id="2Kx-iy-yHR"/>
+                            <constraint firstItem="zm7-Dd-sCM" firstAttribute="top" secondItem="KOr-oU-J0g" secondAttribute="bottom" id="9JM-uW-l0e"/>
+                            <constraint firstItem="KOr-oU-J0g" firstAttribute="top" secondItem="qGd-me-G1D" secondAttribute="bottom" id="Nuy-xj-T0A"/>
+                            <constraint firstItem="qGd-me-G1D" firstAttribute="leading" secondItem="PJI-EC-x4P" secondAttribute="leading" id="Uka-Jd-F5r"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KOr-oU-J0g" secondAttribute="trailing" constant="-20" id="aCt-sf-M7E"/>
+                            <constraint firstItem="KOr-oU-J0g" firstAttribute="top" secondItem="qGd-me-G1D" secondAttribute="bottom" constant="5" id="fFV-j0-CKy"/>
+                            <constraint firstItem="KOr-oU-J0g" firstAttribute="top" secondItem="qGd-me-G1D" secondAttribute="bottom" id="ogB-r6-gf8"/>
+                            <constraint firstAttribute="trailing" secondItem="qGd-me-G1D" secondAttribute="trailing" id="sJ1-QG-kH0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="fFV-j0-CKy"/>
+                                <exclude reference="ogB-r6-gf8"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="150" height="150"/>
+                    <connections>
+                        <outlet property="educationPicker" destination="KOr-oU-J0g" id="SYI-zI-1Ct"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qj4-0D-LpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2209" y="353"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Xe9-B8-fR6">
